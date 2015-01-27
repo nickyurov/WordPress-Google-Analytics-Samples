@@ -69,3 +69,12 @@ jQuery(document).ready(function(){
         window.location.replace(url);
     });
 });
+
+/*
+* 404 Page Tracking
+*/
+jQuery(document).ready(function(){
+    if(jQuery('body').hasClass('error404')){
+        ga('send', 'event', 'Error', '404 Error', document.referrer);
+    }
+});
